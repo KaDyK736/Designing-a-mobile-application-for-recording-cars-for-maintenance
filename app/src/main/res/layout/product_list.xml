@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F8F8F8">
+
+    <!-- Блок для отображения общей информации -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:elevation="2dp">
+
+        <!-- ID -->
+        <TextView
+            android:id="@+id/textViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID: 1"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="#333333" />
+
+        <!-- ID клиента -->
+        <TextView
+            android:id="@+id/textViewId_client"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewId"
+            android:layout_marginTop="4dp"
+            android:text="Client ID: 1"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="#333333" />
+
+        <!-- Время -->
+        <TextView
+            android:id="@+id/textViewtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewId_client"
+            android:layout_marginTop="4dp"
+            android:text="Time: 15:30"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="#333333" />
+
+        <!-- Свободно/занято -->
+        <TextView
+            android:id="@+id/textViewfree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewtime"
+            android:layout_marginTop="4dp"
+            android:text="Free: No"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="#FF0000" />
+
+        <!-- Цена -->
+        <TextView
+            android:id="@+id/textViewprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewfree"
+            android:layout_marginTop="4dp"
+            android:text="Price: 1000"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="#333333" />
+
+        <!-- Тип услуги -->
+        <TextView
+            android:id="@+id/textViewtype_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewprice"
+            android:layout_marginTop="4dp"
+            android:text="Service Type: Engine"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="#333333" />
+
+        <!-- Марка машины -->
+        <TextView
+            android:id="@+id/textViewbrand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewtype_service"
+            android:layout_marginTop="4dp"
+            android:text="Brand: Lada"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="#333333" />
+
+        <!-- Модель машины -->
+        <TextView
+            android:id="@+id/textViewmodel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewbrand"
+            android:layout_marginTop="4dp"
+            android:text="Model: Granta"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="#333333" />
+
+        <!-- Регистрационный номер -->
+        <TextView
+            android:id="@+id/textViewVRC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewmodel"
+            android:layout_marginTop="4dp"
+            android:text="VRC: 1234"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="#333333" />
+
+        <!-- Год машины -->
+        <TextView
+            android:id="@+id/textViewyear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewVRC"
+            android:layout_marginTop="4dp"
+            android:text="Year: 2021"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="#333333" />
+
+
+        <!-- Контейнер для кнопок -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <!-- Кнопка Бронирования -->
+            <Button
+                android:id="@+id/buttonReservation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Бронирование"
+                android:background="@color/design_default_color_primary"
+                android:textColor="#FFFFFF"
+                android:onClick="goToReservation" />
+
+            <!-- Кнопка Отмена -->
+            <Button
+                android:id="@+id/buttonCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Отмена"
+                android:background="@color/design_default_color_secondary"
+                android:textColor="#FFFFFF"
+                android:onClick="goToCancel" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
